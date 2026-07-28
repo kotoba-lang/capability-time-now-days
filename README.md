@@ -2,17 +2,17 @@
 
 Atomic authority package for `time/now-days`.
 
-- imports: `#{:now-days}`
-- effects: `#{:clock}`
-- default policy: `:autonomous`
+- provider status: **reference-implemented**
 - semantic definition CID: `bafyreigg7f4obntus3fdmeuxuhcatwg4ijkhyurjwh27kegrm2co2xuaxm`
-- hash contract CID: `bafkreiflhj3fslsbh7okdas2fzlhmogai64x6p3lkla6gtr7berbp7ftvi`
-- provider status: `contract-only`
+- artifact: `artifacts/provider.core.wasm` (sha256 `939e4b4f13757b429299cbd86d24dba5b69874544828550a7628bfb690a0f7fa`)
+- JVM reference: `kotoba.capability.time.now-days.provider`
+- host ABI: module `kotoba`, field `now_days`, `() → f32`
 
-The repository name is a discovery alias. The semantic definition CID
-is the immutable import identity. Importing it does not grant runtime
-authority: Tamaki must request it explicitly and Kototama must admit
-the sealed envelope.
+Definition CID is unchanged by this provider landing.
+`:signature :reference-unsigned` is reference packaging.
+
+Core wasm returns `0.0` (ABI packaging). JVM `now-days` uses UTC millis /
+86400000 as a continuous day counter for host semantics.
 
 ```sh
 clojure -M:test
