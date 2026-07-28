@@ -1,0 +1,5 @@
+(ns kotoba.capability.time.now-days
+  "Importable contract for time/now-days.")
+
+(def manifest
+  {:schema "kotoba.capability.repository.v1", :capability/version 1, :capability/dependencies #{}, :capability/imports #{:now-days}, :authority "kotoba-lang/kotoba-core-contracts", :capability/default-policy :autonomous, :capability/artifact {:format :wasm-component, :digest-required? true, :signature-required? true}, :capability/radicle-rid nil, :capability/repository "kotoba-lang/capability-time-now-days", :capability/id "time/now-days", :capability/effects #{:clock}, :capability/provider-status :contract-only})
