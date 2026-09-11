@@ -15,5 +15,5 @@ Core wasm returns `0.0` (ABI packaging). JVM `now-days` uses UTC millis /
 86400000 as a continuous day counter for host semantics.
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
